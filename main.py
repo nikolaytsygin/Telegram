@@ -23,9 +23,10 @@ def say_hi(update, context):
     # Получаем информацию о чате, из которого пришло сообщение,
     # и сохраняем в переменную chat
     chat = update.effective_chat
-    # В ответ на любое текстовое сообщение 
+    # В ответ на любое текстовое сообщение
+    hello='Привет, я KittyBot!'
     # будет отправлено 'Привет, я KittyBot!'
-    context.bot.send_message(chat_id=chat.id, text='Привет, я KittyBot!')
+    context.bot.send_message(chat_id=chat.id, text=hello)
 
 # Регистрируется обработчик MessageHandler;
 # из всех полученных сообщений он будет выбирать только текстовые сообщения
